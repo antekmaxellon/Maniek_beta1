@@ -29,7 +29,7 @@ class WakeWordDetector(context: Context, classifierAsset: String = "maniek.onnx"
         val bytes = context.assets.open(asset).use { it.readBytes() }
         val opts = OrtSession.SessionOptions().apply {
             // CPU
-            setIntraOpNumThreads(1)
+            setIntraOpNumThreads(2)
         }
         return env.createSession(bytes, opts)
     }

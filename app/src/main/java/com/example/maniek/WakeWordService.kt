@@ -44,7 +44,7 @@ class WakeWordService : Service() {
     private val threshold = 0.2f
     private val hitsRequired = 1
     private val debounceMs = 2000L
-    private val stepMillis = 1000
+    private val stepMillis = 400
 
     @Volatile private var keepRunning = false
     @Volatile private var pauseForCommand = false
